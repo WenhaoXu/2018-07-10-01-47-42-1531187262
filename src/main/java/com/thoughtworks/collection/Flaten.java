@@ -12,6 +12,7 @@ public class Flaten {
     }
 
     public List<Integer> transformToOneDimesional() {
+//        Arrays.stream(array).map(x->x= Arrays.stream(x).map(y->y=y.))
         throw new NotImplementedException();
     }
 

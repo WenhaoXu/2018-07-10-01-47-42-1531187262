@@ -13,6 +13,9 @@ public class Reduce {
     }
 
     public int getMaximum() {
+//        int [] arrays=arrayList.toArray();
+//        Arrays.sort(arrayList.toArray());
+//      return   (int)arrays[arrayList.size()-1];
         throw new NotImplementedException();
     }
 

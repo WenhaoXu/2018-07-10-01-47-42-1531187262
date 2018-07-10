@@ -16,6 +16,7 @@ public class InverseReduce {
     }
 
     public List<Integer> divideToSmaller(int number) {
+//        return Stream.iterate(number-2,{if(n>=0){return n->n-2}}).collect(Collectors.toList());
         throw new NotImplementedException();
     }
 }
