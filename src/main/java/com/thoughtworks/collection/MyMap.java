@@ -1,7 +1,5 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,11 +26,21 @@ public class MyMap {
     }
 
     public List<String> mapLetters() {
-        throw new NotImplementedException();
+      return   array.stream().map(x->{
+          if(x/26==0){
+              return letterList.get(x%26-1);
+          }
+          if(x%26==0){
+              return letterList.get(x/26-2)+"z";
+          }
+            return letterList.get(x/26-1) +letterList.get(x%26-1);
+
+        }).collect(Collectors.toList());
+//        throw new NotImplementedException();
     }
 
     public List<Integer> sortFromBig() {
-       return array.stream().sorted((o1,o2)->o2.compareTo(01)).collect(Collectors.toList());
+       return array.stream().sorted((o1,o2)->-1).collect(Collectors.toList());
 //        throw new NotImplementedException();
     }
 

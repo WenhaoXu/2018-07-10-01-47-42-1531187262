@@ -1,7 +1,5 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +21,8 @@ public class Filter {
     }
 
     public List<Integer> getCommonElements(List<Integer> firstList, List<Integer> secondList) {
-        throw new NotImplementedException();
+     return    firstList.stream().filter(x->secondList.contains(x)).collect(Collectors.toList());
+//        throw new NotImplementedException();
     }
 
     public List<Integer> getDifferentElements() {

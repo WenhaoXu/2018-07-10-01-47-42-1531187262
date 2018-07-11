@@ -42,6 +42,9 @@ public class CollectionOperator {
     }
 
     public List<Integer> addUncommonElement(Integer[] firstArray, Integer[] secondArray) {
- return       Arrays.stream(firstArray).filter(x-> Arrays.stream(secondArray).anyMatch(y->x==y)).collect(Collectors.toList());
+      List<Integer> list=Arrays.asList(firstArray).stream().collect(Collectors.toList());
+      list.addAll(Arrays.asList(secondArray));
+     return list.stream().distinct().collect(Collectors.toList());
+
     }
 }
